@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+}
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+/* When the checkbox is checked, we will add a blue background */
+.container input:checked ~ .checkmark {
+  border: 1px solid black;
+}
+/* lets Create the checkmark (it will be hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* we will show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 15px;
+  top: -3px;
+  width: 5px;
+  height: 16px;
+  border: solid #00adb5;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.container input{
+    display: none;
+}

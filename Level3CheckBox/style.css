@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border-radius: 50px;
+  transition: all 0.7s;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background: black;
+  box-shadow: -10px -10px 20px 0px #f94892, 0 -10px 20px 0px #fbdf07,
+    10px -10px 20px 0px #89cffd, 10px 0 20px 0px #89cffd,
+    10px 10px 20px 0px #ff7f3f, 0 10px 20px 0px #ff7f3f,
+    -10px 10px 20px 0px #fbdf07;
+  /* Optional. The spread radius.(the fourth one)
+     A positive value increases the size of the shadow,
+     a negative value decreases the size of the shadow */
+  /* and if you dont know first one is x line second one is y line third is blur and 
+     i said spread and last one is color */
+}
+/*  now lets Create the checkmark (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* we will Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark */
+.container .checkmark:after {
+  left: 12px;
+  top: 7px;
+  width: 4px;
+  height: 10px;
+  border: solid #f0f0f0;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/* and we will Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}

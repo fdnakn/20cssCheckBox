@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #212831;
+}
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #fff;
+  border-radius: 16px 0px 16px;
+  /* Three values - border-radius: 16px 0px 16px;
+   (first value applies to top-left corner, second value applies to top-right 
+   and bottom-left corners, and third value applies to bottom-right corner): */
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  box-shadow: 0px 0px 40px 5px #fff;
+}
+/* Create the checkmark (it will be hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* i will Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* now we will Style the checkmark */
+.container .checkmark:after {
+  left: 8px;
+  top: 6px;
+  width: 4px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+}
+/* now we need to Hide the default checkbox */
+.container input {
+ display: none;
+}

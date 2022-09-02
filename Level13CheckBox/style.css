@@ -1,0 +1,39 @@
+body {
+  /* firstl we will put the item on the center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #212831;
+}
+
+label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+/* let style the checkbox */
+.checkbox {
+  display: block;
+  width: 25px;
+  height: 30px;
+  border: solid 3px #00adb5;
+  border-radius: 6px;
+  transition: all 0.4;
+}
+/* then we will change
+the shape of checkbox when it is checked */
+input:checked ~ .checkbox {
+  border-color: #00adb5;
+  transform: rotate(45deg);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  width: 14px;
+}
+/* and we will hide the default hide */
+input {
+  display: none;
+}

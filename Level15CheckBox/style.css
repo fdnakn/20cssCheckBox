@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #212831;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 27px;
+  width: 27px;
+  background: #fff;
+  border-radius: 5px;
+}
+/* When the checkbox is checked,
+ we will add a linear gradient color for  background */
+.container input:checked ~ .checkmark {
+  background: linear-gradient(
+    90deg,
+    rgba(58, 180, 119, 1) 17%,
+    rgba(225, 253, 29, 1) 46%,
+    rgba(69, 252, 167, 1) 79%
+  );
+  background-size: -150%;
+}
+
+/* we need to Create the checkmark (it will be hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* we will Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 5px;
+  height: 11px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/* and we will hide the checkbox */
+input{
+    display: none;
+}

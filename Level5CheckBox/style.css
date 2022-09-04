@@ -5,6 +5,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+    background-color: #212831;
 }
 .container {
   display: block;
@@ -33,8 +34,8 @@ body {
   opacity: 1;
   background: linear-gradient(
     45deg,
-    rgb(100, 61, 219) 0%,
-    rgb(217, 21, 239) 100%
+    #83E85A 0%,
+   #107A8B 100%
   );
 }
 /* we will Create the checkmark/indicator (hidden when not checked) */

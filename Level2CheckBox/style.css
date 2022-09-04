@@ -5,6 +5,7 @@ body{
     height: 100vh;
     width: 100%;
     overflow: hidden;
+     background-color: #212831;
 }
 .check {
 /* this is our label*/
@@ -38,7 +39,7 @@ body{
 #check:checked ~ .check {
  /* ( ~ you know this )  Selects every .cbx:after element that is
  preceded by a cbx:checked element */
- background: #6871f1;
+ background: #00adb5;
  animation: jelly 0.6s ease;
 }
 

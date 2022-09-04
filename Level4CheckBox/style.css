@@ -5,6 +5,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: #212831;
 }
 .container {
   display: block;
@@ -25,7 +26,7 @@ body {
 }
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: limegreen;
+  background-color: yellowgreen;
 }
 /* Create the checkmark (it will be hidden when not checked) */
 .checkmark:after {
